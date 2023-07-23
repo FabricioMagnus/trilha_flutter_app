@@ -41,7 +41,7 @@ class _HomePageStateState extends State<HomePageState> {
             const SizedBox(
               height: 20,
             ),
-            Text(
+            const Text(
               "Já tem Cadastro?",
               style: TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255),
@@ -51,7 +51,7 @@ class _HomePageStateState extends State<HomePageState> {
             const SizedBox(
               height: 15,
             ),
-            Text(
+            const Text(
               "Faça seu login e make the change_",
               style: TextStyle(
                   color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
@@ -65,16 +65,16 @@ class _HomePageStateState extends State<HomePageState> {
                 alignment: Alignment.center,
                 child: TextField(
                   decoration: InputDecoration(
-                    enabledBorder: UnderlineInputBorder(
+                    enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(
                       color: Color.fromARGB(255, 141, 79, 151),
                     )),
-                    focusedBorder: UnderlineInputBorder(
+                    focusedBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(
                       color: Color.fromARGB(255, 141, 79, 151),
                     )),
                     hintText: "Digite seu e-mail",
-                    hintStyle: TextStyle(color: Colors.white),
+                    hintStyle: const TextStyle(color: Colors.white),
                     prefixIcon: Icon(
                       Icons.email_outlined,
                       color: Colors.purple[800],
@@ -90,21 +90,21 @@ class _HomePageStateState extends State<HomePageState> {
                 alignment: Alignment.center,
                 child: TextField(
                   decoration: InputDecoration(
-                      enabledBorder: UnderlineInputBorder(
+                      enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(
                         color: Color.fromARGB(255, 141, 79, 151),
                       )),
-                      focusedBorder: UnderlineInputBorder(
+                      focusedBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(
                         color: Color.fromARGB(255, 141, 79, 151),
                       )),
                       hintText: "Digite sua senha",
-                      hintStyle: TextStyle(color: Colors.white),
+                      hintStyle: const TextStyle(color: Colors.white),
                       prefixIcon: Icon(
                         Icons.password_outlined,
                         color: Colors.purple[800],
                       ),
-                      suffixIcon: Icon(
+                      suffixIcon: const Icon(
                         Icons.visibility,
                         color: Colors.white,
                       )),
