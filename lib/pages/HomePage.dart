@@ -65,6 +65,7 @@ class _HomePageStateState extends State<HomePageState> {
                 alignment: Alignment.center,
                 child: TextField(
                   decoration: InputDecoration(
+                    contentPadding: EdgeInsets.only(top: 0),
                     enabledBorder: const UnderlineInputBorder(
                         borderSide: BorderSide(
                       color: Color.fromARGB(255, 141, 79, 151),
@@ -90,6 +91,7 @@ class _HomePageStateState extends State<HomePageState> {
                 alignment: Alignment.center,
                 child: TextField(
                   decoration: InputDecoration(
+                      contentPadding: EdgeInsets.only(top: 0),
                       enabledBorder: const UnderlineInputBorder(
                           borderSide: BorderSide(
                         color: Color.fromARGB(255, 141, 79, 151),
