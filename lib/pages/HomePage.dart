@@ -21,146 +21,156 @@ class _HomePageStateState extends State<HomePageState> {
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body: SizedBox(
         width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 70,
+        child: SingleChildScrollView(
+          child: ConstrainedBox(
+            constraints: BoxConstraints(
+              maxHeight: MediaQuery.of(context).size.height,
             ),
-            Row(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Expanded(child: Container()),
-                Expanded(
-                  flex: 7,
-                  child: Image.network(
-                      "https://hermes.digitalinnovation.one/assets/diome/logo.png"),
+                const SizedBox(
+                  height: 70,
                 ),
-                Expanded(child: Container()),
+                Row(
+                  children: [
+                    Expanded(child: Container()),
+                    Expanded(
+                      flex: 7,
+                      child: Image.network(
+                          "https://hermes.digitalinnovation.one/assets/diome/logo.png"),
+                    ),
+                    Expanded(child: Container()),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const Text(
+                  "Já tem Cadastro?",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255),
+                      fontSize: 35,
+                      fontWeight: FontWeight.w500),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Text(
+                  "Faça seu login e make the change_",
+                  style: TextStyle(
+                      color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    height: 30,
+                    alignment: Alignment.center,
+                    child: TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                        contentPadding: EdgeInsets.only(top: 0),
+                        enabledBorder: const UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Color.fromARGB(255, 141, 79, 151),
+                        )),
+                        focusedBorder: const UnderlineInputBorder(
+                            borderSide: BorderSide(
+                          color: Color.fromARGB(255, 141, 79, 151),
+                        )),
+                        hintText: "Digite seu e-mail",
+                        hintStyle: const TextStyle(color: Colors.white),
+                        prefixIcon: Icon(
+                          Icons.email_outlined,
+                          color: Colors.purple[800],
+                        ),
+                      ),
+                    )),
+                const SizedBox(
+                  height: 25,
+                ),
+                Container(
+                    margin: const EdgeInsets.only(left: 20, right: 20),
+                    height: 30,
+                    alignment: Alignment.center,
+                    child: TextField(
+                      style: TextStyle(color: Colors.white),
+                      decoration: InputDecoration(
+                          contentPadding: EdgeInsets.only(top: 0),
+                          enabledBorder: const UnderlineInputBorder(
+                              borderSide: BorderSide(
+                            color: Color.fromARGB(255, 141, 79, 151),
+                          )),
+                          focusedBorder: const UnderlineInputBorder(
+                              borderSide: BorderSide(
+                            color: Color.fromARGB(255, 141, 79, 151),
+                          )),
+                          hintText: "Digite sua senha",
+                          hintStyle: const TextStyle(color: Colors.white),
+                          prefixIcon: Icon(
+                            Icons.password_outlined,
+                            color: Colors.purple[800],
+                          ),
+                          suffixIcon: const Icon(
+                            Icons.visibility,
+                            color: Colors.white,
+                          )),
+                    )),
+                const SizedBox(
+                  height: 25,
+                ),
+                Container(
+                  width: double.infinity,
+                  margin: const EdgeInsets.symmetric(horizontal: 40),
+                  height: 40,
+                  alignment: Alignment.center,
+                  child: SizedBox(
+                    width: double.infinity,
+                    height: 40,
+                    child: TextButton(
+                        style: ButtonStyle(
+                            shape:
+                                MaterialStatePropertyAll(RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8),
+                            )),
+                            backgroundColor: MaterialStateProperty.all(
+                              Colors.purple[800],
+                            )),
+                        onPressed: () {},
+                        child: const Text(
+                          "ENTRAR",
+                          style: TextStyle(color: Colors.white),
+                        )),
+                  ),
+                ),
+                const SizedBox(
+                  height: 50,
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 20, right: 20),
+                  height: 30,
+                  alignment: Alignment.center,
+                  child: Text("Esqueci minha senha",
+                      style: TextStyle(
+                        color: Colors.yellow[600],
+                        fontWeight: FontWeight.w200,
+                      )),
+                ),
+                Container(
+                  margin: const EdgeInsets.only(left: 20, right: 20),
+                  height: 30,
+                  alignment: Alignment.center,
+                  child: Text("Criar conta",
+                      style: TextStyle(
+                        color: Colors.green[900],
+                        fontWeight: FontWeight.bold,
+                      )),
+                ),
               ],
             ),
-            const SizedBox(
-              height: 20,
-            ),
-            const Text(
-              "Já tem Cadastro?",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255),
-                  fontSize: 35,
-                  fontWeight: FontWeight.w500),
-            ),
-            const SizedBox(
-              height: 15,
-            ),
-            const Text(
-              "Faça seu login e make the change_",
-              style: TextStyle(
-                  color: Color.fromARGB(255, 255, 255, 255), fontSize: 18),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Container(
-                margin: const EdgeInsets.only(left: 20, right: 20),
-                height: 30,
-                alignment: Alignment.center,
-                child: TextField(
-                  decoration: InputDecoration(
-                    contentPadding: EdgeInsets.only(top: 0),
-                    enabledBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Color.fromARGB(255, 141, 79, 151),
-                    )),
-                    focusedBorder: const UnderlineInputBorder(
-                        borderSide: BorderSide(
-                      color: Color.fromARGB(255, 141, 79, 151),
-                    )),
-                    hintText: "Digite seu e-mail",
-                    hintStyle: const TextStyle(color: Colors.white),
-                    prefixIcon: Icon(
-                      Icons.email_outlined,
-                      color: Colors.purple[800],
-                    ),
-                  ),
-                )),
-            const SizedBox(
-              height: 25,
-            ),
-            Container(
-                margin: const EdgeInsets.only(left: 20, right: 20),
-                height: 30,
-                alignment: Alignment.center,
-                child: TextField(
-                  decoration: InputDecoration(
-                      contentPadding: EdgeInsets.only(top: 0),
-                      enabledBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                        color: Color.fromARGB(255, 141, 79, 151),
-                      )),
-                      focusedBorder: const UnderlineInputBorder(
-                          borderSide: BorderSide(
-                        color: Color.fromARGB(255, 141, 79, 151),
-                      )),
-                      hintText: "Digite sua senha",
-                      hintStyle: const TextStyle(color: Colors.white),
-                      prefixIcon: Icon(
-                        Icons.password_outlined,
-                        color: Colors.purple[800],
-                      ),
-                      suffixIcon: const Icon(
-                        Icons.visibility,
-                        color: Colors.white,
-                      )),
-                )),
-            const SizedBox(
-              height: 25,
-            ),
-            Container(
-              width: double.infinity,
-              margin: const EdgeInsets.symmetric(horizontal: 40),
-              height: 40,
-              alignment: Alignment.center,
-              child: SizedBox(
-                width: double.infinity,
-                height: 40,
-                child: TextButton(
-                    style: ButtonStyle(
-                        shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(8),
-                        )),
-                        backgroundColor: MaterialStateProperty.all(
-                          Colors.purple[800],
-                        )),
-                    onPressed: () {},
-                    child: const Text(
-                      "ENTRAR",
-                      style: TextStyle(color: Colors.white),
-                    )),
-              ),
-            ),
-            const SizedBox(
-              height: 50,
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              height: 30,
-              alignment: Alignment.center,
-              child: Text("Esqueci minha senha",
-                  style: TextStyle(
-                    color: Colors.yellow[600],
-                    fontWeight: FontWeight.w200,
-                  )),
-            ),
-            Container(
-              margin: const EdgeInsets.only(left: 20, right: 20),
-              height: 30,
-              alignment: Alignment.center,
-              child: Text("Criar conta",
-                  style: TextStyle(
-                    color: Colors.green[900],
-                    fontWeight: FontWeight.bold,
-                  )),
-            ),
-          ],
+          ),
         ),
       ),
     );
